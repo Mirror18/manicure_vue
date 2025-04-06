@@ -69,8 +69,8 @@ const userStore = useUserStore()
 
 // 定义响应式的表单对象
 const form = reactive({
-  username: 'test',
-  password: 'test'
+  username: 'admin',
+  password: '123456'
 })
 
 const router = useRouter()
@@ -112,7 +112,7 @@ const onSubmit = () => {
     login(form.username, form.password).then((res) => {
       console.log(res)
       // 判断是否成功
-      if (res.success == true) {
+      if (res.success === true) {
         // 提示登录成功
         showMessage('登录成功')
 
@@ -142,7 +142,7 @@ const onSubmit = () => {
 // 按回车键后，执行登录事件
 function onKeyUp(e) {
   console.log(e)
-  if (e.key == 'Enter') {
+  if (e.key === 'Enter') {
     onSubmit()
   }
 }

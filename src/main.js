@@ -6,6 +6,9 @@ import { createPinia } from 'pinia'
 import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import App from '@/App.vue'
 import router from '@/router/index.js'
+// 导入全局路由守卫
+import '@/permission'
+import 'nprogress/nprogress.css'
 
 const app = createApp(App)
 
